@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 220px;
+            min-height: 160px;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #FFFFFF;
+            margin: 0;
+            color: #333333;
+            border: 1px solid #BC002D;
+        }
+        
+        .container {
+            background: rgba(188, 0, 45, 0.02);
+            border-radius: 6px;
+            padding: 12px;
+        }
+        
+        h1 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            text-align: center;
+            color: #BC002D;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .status.spa {
+            background: linear-gradient(135deg, #BC002D 0%, #8B0020 100%);
+            box-shadow: 0 4px 15px rgba(188, 0, 45, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .status.regular {
+            background: linear-gradient(135deg, #E0E0E0 0%, #CCCCCC 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            color: #666666;
+        }
+        
+        .details {
+            margin-top: 10px;
+            padding: 8px;
+            background: rgba(188, 0, 45, 0.02);
+            border-radius: 4px;
+            font-size: 12px;
+            color: #333333;
+        }
+        
+        .framework-badge {
+            display: inline-block;
+            background: #BC002D;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 15px;
+            margin: 2px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #666666;
+        }
+        
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(188, 0, 45, 0.1);
+            border-top: 3px solid #BC002D;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 15px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>侍 SPA Detector</h1>
+        <div id="content" class="loading">
+            <div class="loading-spinner"></div>
+            <div>Analisando página...</div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
